@@ -1,0 +1,156 @@
+/* Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  line-height: 1.6;
+  color: #333;
+}
+
+/* Header */
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 30px;
+  background: #fff;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+header .logo img {
+  height: 60px;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+}
+
+nav a {
+  text-decoration: none;
+  color: #333;
+  font-weight: bold;
+}
+
+.btn {
+  background: #e63946;
+  color: #fff;
+  padding: 10px 20px;
+  border-radius: 25px;
+  text-decoration: none;
+  transition: 0.3s;
+}
+
+.btn:hover {
+  background: #d62828;
+}
+
+/* Hero */
+.hero {
+  position: relative;
+  height: 90vh;
+  background: url('images/hero.jpg') no-repeat center center/cover;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  color: #fff;
+}
+
+.hero .overlay {
+  position: absolute;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background: rgba(0,0,0,0.5);
+}
+
+.hero-content {
+  position: relative;
+  z-index: 2;
+}
+
+.hero h1 {
+  font-size: 3rem;
+  margin-bottom: 15px;
+}
+
+/* Secciones */
+section {
+  padding: 60px 20px;
+  text-align: center;
+}
+
+.experiencias .cards,
+.tours .cards {
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.card {
+  background: #f4f4f4;
+  padding: 20px;
+  border-radius: 15px;
+  width: 300px;
+}
+
+.card img {
+  width: 100%;
+  border-radius: 15px;
+  margin-bottom: 15px;
+}
+
+.testimonios-grid {
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+}
+
+blockquote {
+  font-style: italic;
+  background: #eee;
+  padding: 20px;
+  border-radius: 10px;
+  width: 300px;
+}
+
+/* Footer */
+footer {
+  background: #333;
+  color: #fff;
+  padding: 40px 20px;
+}
+
+footer form {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  max-width: 400px;
+  margin: 0 auto 20px;
+}
+
+footer input, footer textarea {
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+}
+
+footer button {
+  background: #e63946;
+  border: none;
+  padding: 10px;
+  border-radius: 5px;
+  color: #fff;
+  cursor: pointer;
+}
+
+footer button:hover {
+  background: #d62828;
+}
