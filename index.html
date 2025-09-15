@@ -1,110 +1,90 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
   <title>Vive Jericó - Agencia de Turismo</title>
+
+  <!-- Enlaza tu style.css (el que dijiste que funciona) -->
+  <link rel="stylesheet" href="style.css">
+
+  <!-- Pequeñas reglas específicas para el hero,
+       para asegurarnos que la imagen no quede gigante -->
   <style>
-    body {
-      margin: 0;
-      font-family: Arial, sans-serif;
-      color: #333;
-      line-height: 1.6;
+    .hero { position: relative; width:100%; overflow:hidden; }
+    .hero-img { width:100%; height:60vh; object-fit:cover; display:block; }
+    .hero-text {
+      position:absolute;
+      top:50%;
+      left:50%;
+      transform:translate(-50%,-50%);
+      background: rgba(0,0,0,0.38);
+      color: #fff;
+      padding: 14px 18px;
+      border-radius: 8px;
+      text-align:center;
+      max-width:90%;
     }
-
-    header {
-      background: #fff;
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      padding: 10px 20px;
-      border-bottom: 1px solid #ddd;
-    }
-
-    header img {
-      height: 50px;
-      width: auto;
-    }
-
-    nav a {
-      margin: 0 15px;
-      text-decoration: none;
-      color: #333;
-      font-weight: bold;
-    }
-
-    .hero {
-      position: relative;
-      width: 100%;
-      height: 400px; /* control de altura */
-      background: url('images/hero.jpg') no-repeat center center/cover;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      color: white;
-      text-align: center;
-    }
-
-    .hero button {
-      background: #e63946;
-      color: white;
-      border: none;
-      padding: 12px 20px;
-      font-size: 18px;
-      border-radius: 6px;
-      cursor: pointer;
-    }
-
-    section {
-      padding: 40px 20px;
-      text-align: center;
-      max-width: 900px;
-      margin: auto;
-    }
-
-    footer {
-      background: #333;
-      color: white;
-      text-align: center;
-      padding: 20px;
-      margin-top: 40px;
+    @media (max-width:720px){
+      .hero-img { height:40vh; }
+      .hero-text { padding:10px 12px; font-size:0.95rem; }
     }
   </style>
 </head>
 <body>
+
+  <!-- Header (usa el CSS que ya tienes para estilo del header) -->
   <header>
-    <img src="images/logo.jpg" alt="Logo Vive Jericó">
+    <div class="logo">
+      <img src="images/logo.jpg" alt="Vive Jericó" />
+    </div>
+
     <nav>
-      <a href="#">Inicio</a>
-      <a href="#">Tours</a>
-      <a href="#">Contacto</a>
+      <ul>
+        <li><a href="index.html">Inicio</a></li>
+        <li><a href="tours.html">Tours</a></li>
+        <li><a href="index.html#quienes">Quiénes Somos</a></li>
+        <li><a href="index.html#contacto">Contacto</a></li>
+      </ul>
     </nav>
+
+    <a href="index.html#contacto" class="btn">Reserva tu aventura</a>
   </header>
 
-  <section class="hero">
-    <button>Explora nuestros tours</button>
+  <!-- HERO: uso de <img> con object-fit para que no se deforme -->
+  <section class="hero" aria-label="Hero">
+    <img class="hero-img" src="images/hero.jpg" alt="Cerro de las Nubes - Jericó">
+    <div class="hero-text" role="region" aria-label="Texto principal">
+      <h1>Descubre la magia de Jericó</h1>
+      <p>Bienestar, naturaleza y cultura en un solo lugar</p>
+      <a class="btn" href="tours.html">Explora nuestros tours</a>
+    </div>
   </section>
 
-  <section>
-    <h2>¿Quiénes somos?</h2>
-    <p>
-      En <b>Vive Jericó</b> diseñamos experiencias únicas de turismo cultural, espiritual y de naturaleza. 
-      Queremos que tu visita a Jericó sea un viaje de transformación, conexión y bienestar.
-    </p>
-  </section>
+  <main>
+    <section id="quienes" class="about">
+      <h2>¿Quiénes somos?</h2>
+      <p>
+        En <strong>Vive Jericó</strong> diseñamos experiencias únicas de turismo cultural, espiritual y de naturaleza.
+        Queremos que tu visita a Jericó sea un viaje de transformación, conexión y bienestar.
+      </p>
+    </section>
 
-  <section>
-    <h2>Contáctanos</h2>
-    <p>
-      Reserva tu próxima experiencia en Jericó:<br>
-      📍 Jericó, Antioquia - Colombia <br>
-      📞 +57 300 000 0000 <br>
-      ✉️ contacto@vivejerico.com
-    </p>
-  </section>
+    <section id="contacto" class="contact">
+      <h2>Contáctanos</h2>
+      <p>Reserva tu próxima experiencia en Jericó:</p>
+      <ul>
+        <li>📍 Jericó, Antioquia - Colombia</li>
+        <li>📞 +57 300 000 0000</li>
+        <li>✉️ contacto@vivejerico.com</li>
+      </ul>
+    </section>
+  </main>
 
   <footer>
-    © 2025 Vive Jericó - Agencia de Turismo
+    <p>© <span id="year"></span> Vive Jericó - Agencia de Turismo</p>
   </footer>
+
+  <script>document.getElementById('year').innerText = new Date().getFullYear();</script>
 </body>
 </html>
