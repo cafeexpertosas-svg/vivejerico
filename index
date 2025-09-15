@@ -21,7 +21,7 @@
 
   <!-- Sección Hero -->
   <section class="hero">
-    <img src="images/hero.jpg" alt="Paisaje de Jericó - Cerro de las Nubes">
+    <div class="overlay"></div>
     <div class="hero-text">
       <h1>Descubre la magia de Jericó</h1>
       <p>Bienestar, naturaleza y cultura en un solo lugar</p>
