@@ -4,54 +4,107 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Vive Jericó - Agencia de Turismo</title>
-  <link rel="stylesheet" href="style.css">
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      color: #333;
+      line-height: 1.6;
+    }
+
+    header {
+      background: #fff;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 10px 20px;
+      border-bottom: 1px solid #ddd;
+    }
+
+    header img {
+      height: 50px;
+      width: auto;
+    }
+
+    nav a {
+      margin: 0 15px;
+      text-decoration: none;
+      color: #333;
+      font-weight: bold;
+    }
+
+    .hero {
+      position: relative;
+      width: 100%;
+      height: 400px; /* control de altura */
+      background: url('images/hero.jpg') no-repeat center center/cover;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: white;
+      text-align: center;
+    }
+
+    .hero button {
+      background: #e63946;
+      color: white;
+      border: none;
+      padding: 12px 20px;
+      font-size: 18px;
+      border-radius: 6px;
+      cursor: pointer;
+    }
+
+    section {
+      padding: 40px 20px;
+      text-align: center;
+      max-width: 900px;
+      margin: auto;
+    }
+
+    footer {
+      background: #333;
+      color: white;
+      text-align: center;
+      padding: 20px;
+      margin-top: 40px;
+    }
+  </style>
 </head>
 <body>
-  <!-- Encabezado -->
   <header>
-    <nav class="navbar">
-      <img src="images/logo.jpg" alt="Vive Jericó Logo" class="logo">
-      <ul class="nav-links">
-        <li><a href="index.html">Inicio</a></li>
-        <li><a href="tours.html">Tours</a></li>
-        <li><a href="#contacto">Contacto</a></li>
-      </ul>
+    <img src="images/logo.jpg" alt="Logo Vive Jericó">
+    <nav>
+      <a href="#">Inicio</a>
+      <a href="#">Tours</a>
+      <a href="#">Contacto</a>
     </nav>
   </header>
 
-  <!-- Sección Hero -->
   <section class="hero">
-    <img src="images/hero.jpg" alt="Paisaje de Jericó - Cerro de las Nubes" class="hero-img">
-    <div class="hero-text">
-      <h1>Descubre la magia de Jericó</h1>
-      <p>Bienestar, naturaleza y cultura en un solo lugar</p>
-      <a href="tours.html" class="btn">Explora nuestros tours</a>
-    </div>
+    <button>Explora nuestros tours</button>
   </section>
 
-  <!-- Sección de presentación -->
-  <section class="about">
+  <section>
     <h2>¿Quiénes somos?</h2>
     <p>
-      En <strong>Vive Jericó</strong> diseñamos experiencias únicas de turismo cultural, espiritual y de naturaleza. 
+      En <b>Vive Jericó</b> diseñamos experiencias únicas de turismo cultural, espiritual y de naturaleza. 
       Queremos que tu visita a Jericó sea un viaje de transformación, conexión y bienestar.
     </p>
   </section>
 
-  <!-- Sección Contacto -->
-  <section id="contacto" class="contact">
+  <section>
     <h2>Contáctanos</h2>
-    <p>Reserva tu próxima experiencia en Jericó:</p>
-    <ul>
-      <li>📍 Jericó, Antioquia - Colombia</li>
-      <li>📞 +57 300 000 0000</li>
-      <li>✉️ contacto@vivejerico.com</li>
-    </ul>
+    <p>
+      Reserva tu próxima experiencia en Jericó:<br>
+      📍 Jericó, Antioquia - Colombia <br>
+      📞 +57 300 000 0000 <br>
+      ✉️ contacto@vivejerico.com
+    </p>
   </section>
 
-  <!-- Footer -->
   <footer>
-    <p>© 2025 Vive Jericó - Agencia de Turismo</p>
+    © 2025 Vive Jericó - Agencia de Turismo
   </footer>
 </body>
 </html>
